@@ -84,5 +84,5 @@ while count!=11:
 
 13. If you had a function named bacon() inside a module named spam, how would you call it after
 importing spam?
-Ans: import bacon as ba
-     ba.bacon()
+Ans: import spam
+     spam.bacon()
