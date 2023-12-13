@@ -1,0 +1,34 @@
+1. How do you distinguish between shutil.copy() and shutil.copytree()?
+   Answer: shutil.copy() is used to copy a single file, while shutil.copytree() is used to copy an entire directory tree, including all of its contents.
+
+2. What function is used to rename files?
+   Answer: The shutil.move() function is used to rename files. It can also be used to move files to a different directory.
+
+3. What is the difference between the delete functions in the send2trash and shutil modules?
+   Answer: The send2trash module's send2trash() function moves files or folders to the system trash or recycle bin, allowing for recovery. The shutil module's shutil.rmtree() function irreversibly deletes an entire directory and its contents.
+
+4. ZipFile objects have a close() method just like File objects’ close() method. What ZipFile method is equivalent to File objects’ open() method?
+   Answer: The ZipFile() constructor is equivalent to File objects' open() method. It is used to create a ZipFile object that can read from or write to a ZIP archive.
+
+5. Create a programme that searches a folder tree for files with a certain file extension (such as .pdf or .jpg). Copy these files from whatever location they are in to a new folder.
+   Answer: Below is a sample program in Python:
+
+import os
+import shutil
+
+# Function to copy files with a specific extension
+def copy_files(source_folder, destination_folder, file_extension):
+    os.makedirs(destination_folder, exist_ok=True)
+
+    for folder, _, files in os.walk(source_folder):
+        for file in files:
+            # file has the specified extension
+            if file.endswith(file_extension):
+                # Build the full path of the file
+                file_path = os.path.join(folder, file)
+                # Copy the file to the destination folder
+                shutil.copy(file_path, destination_folder)
+
+# Example usage:
+# Copy all ".pdf" files from "source_folder" to "destination_folder"
+copy_files("source_folder", "destination_folder", ".pdf")
