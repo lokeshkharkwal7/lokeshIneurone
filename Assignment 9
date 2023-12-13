@@ -1,0 +1,29 @@
+1. To what does a relative path refer?
+   Answer: A relative path refers to the location of a file or directory relative to the current working directory.
+
+2. What does an absolute path start with your operating system?
+   Answer: An absolute path in my operating system (typically Windows, macOS, or Linux) starts with the root directory, such as C:\ on Windows or / on Unix-based systems.
+
+3. What do the functions os.getcwd() and os.chdir() do?
+   Answer: os.getcwd() returns the current working directory, and os.chdir() changes the current working directory to the specified path.
+
+4. What are the . and .. folders?
+   Answer: The . folder represents the current directory, and the .. folder represents the parent directory.
+
+5. In C:\bacon\eggs\spam.txt, which part is the dir name, and which part is the base name?
+   Answer: In the path C:\bacon\eggs\spam.txt, "C:\bacon\eggs" is the directory name, and "spam.txt" is the base name.
+
+6. What are the three “mode” arguments that can be passed to the open() function?
+   Answer: The three mode arguments are:
+     - 'r': Read mode
+     - 'w': Write mode (creates a new file or truncates an existing file)
+     - 'a': Append mode (writes to the end of the file)
+
+7. What happens if an existing file is opened in write mode?
+   Answer: If an existing file is opened in write mode, its existing content is overwritten, and a new file is created if the specified file does not exist.
+
+8. How do you tell the difference between read() and readlines()?
+   Answer: read() reads the entire content of the file as a single string, while readlines() reads the lines of the file into a list, where each list item is a line from the file.
+
+9. What data structure does a shelf value resemble?
+   Answer: A shelf value resembles a dictionary. It is a persistent, dictionary-like object that stores key-value pairs.
