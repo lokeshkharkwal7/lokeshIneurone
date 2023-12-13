@@ -1,0 +1,37 @@
+1. What are escape characters, and how do you use them?
+Answer: Escape characters are special symbols in strings preceded by a backslash (). They are used to represent characters that are challenging to include directly, such as newline (\n) or tab (\t).
+2. What do the escape characters n and t stand for?
+Answer: The escape character "\n" stands for a newline, and "\t" signifies a tab.
+3. What is the way to include backslash characters in a string?
+Answer: To include a backslash character in a string, use a double backslash (\). For example, to represent "C:\new_folder", write "C:\new_folder\".
+4. The string "Howl's Moving Castle" is a correct value. Why isn't the single quote character in the word Howl's not escaped a problem?
+Answer: The string "Howl's Moving Castle" is correct because the single quote in "Howl's" is not escaped. Mixing single and double quotes allows quotes within a string without explicit escaping.
+5. How do you write a string of newlines if you don't want to use the n character?
+Answer: To write a string of newlines without using "\n," use triple quotes (""") and press Enter for each new line:
+python
+multiline_string = """Line 1
+Line 2
+Line 3"""
+
+6. What are the values of the given expressions?
+Answer:
+'Hello, world!'[1] = 'e'
+'Hello, world!'[0:5] = 'Hello'
+'Hello, world!'[:5] = 'Hello'
+'Hello, world!'[3:] = 'lo, world!'
+7. What are the values of the following expressions?
+Answer:
+'Hello'.upper() = 'HELLO'
+'Hello'.upper().isupper() = True
+'Hello'.upper().lower() = 'hello'
+8. What are the values of the following expressions?
+Answer:
+'Remember, remember, the fifth of July.'.split() = ['Remember,', 'remember,', 'the', 'fifth', 'of', 'July.']
+'-'.join('There can only one.'.split()) = 'There-can-only-one.'
+9. What are the methods for right-justifying, left-justifying, and centering a string?
+Answer: Methods for justifying a string:
+Right-justifying: string.rjust(width)
+Left-justifying: string.ljust(width)
+Centering: string.center(width)
+10. What is the best way to remove whitespace characters from the start or end?
+Answer: The best way to remove whitespace from the start or end is to use the strip() method. Example: my_string.strip() removes leading and trailing whitespace.
