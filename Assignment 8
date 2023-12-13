@@ -1,0 +1,23 @@
+1. Is the Python Standard Library included with PyInputPlus?
+   Answer: No, PyInputPlus is not part of the Python Standard Library. It is a separate third-party library that needs to be installed separately.
+
+2. Why is PyInputPlus commonly imported with `import pyinputplus as pypi`?
+   Answer: Renaming the PyInputPlus module to `pypi` is a common convention to make the code more concise and readable. It allows developers to use a shorter alias when calling PyInputPlus functions, making the code more compact.
+
+3. How do you distinguish between `inputInt()` and `inputFloat()`?
+   Answer: `inputInt()` is used to take integer input, while `inputFloat()` is used to take floating-point input. `inputInt()` will raise a `RetryLimitException` if the user enters a non-integer value or a value outside the specified range, while `inputFloat()` will do the same for non-float values.
+
+4. Using PyInputPlus, how do you ensure that the user enters a whole number between 0 and 99?
+   Answer: You can use the `inputInt()` function with the `min` and `max` parameters to ensure the input is a whole number between 0 and 99. For example:
+     ```python
+     response = pyip.inputInt(prompt='Enter a number: ', min=0, max=99)
+     ```
+
+5. What is transferred to the keyword arguments `allowRegexes` and `blockRegexes`?
+   Answer: The `allowRegexes` and `blockRegexes` keyword arguments in PyInputPlus allow you to specify lists of regular expressions. `allowRegexes` allows inputs that match any regular expression in the list, and `blockRegexes` blocks inputs that match any regular expression in the list.
+
+6. If a blank input is entered three times, what does `inputStr(limit=3)` do?
+   Answer: If a blank input is entered three times, `inputStr(limit=3)` will raise a `TimeoutException` because it expects a non-blank input within the specified limit.
+
+7. If blank input is entered three times, what does `inputStr(limit=3, default='hello')` do?
+   Answer: If blank input is entered three times, `inputStr(limit=3, default='hello')` will return the default value 'hello' without raising an exception. The `default` parameter specifies the value to be returned if the user reaches the input limit without providing a valid input.
